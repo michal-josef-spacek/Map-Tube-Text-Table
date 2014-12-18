@@ -13,7 +13,7 @@ license 'artistic_2';
 name 'Map-Tube-Text-Table';
 readme_from 'Table.pm';
 requires 'List::Util' => 0;
-requires 'Map::Tube' => '2.27';
+requires 'Map::Tube' => '2.44';
 requires 'Moo' => 0;
 requires 'namespace::clean' => 0;
 requires 'perl' => '5.8.0';

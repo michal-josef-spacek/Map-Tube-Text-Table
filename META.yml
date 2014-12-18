@@ -26,7 +26,7 @@ no_index:
     - t
 requires:
   List::Util: 0
-  Map::Tube: '2.27'
+  Map::Tube: '2.44'
   Moo: 0
   namespace::clean: 0
   perl: 5.8.0

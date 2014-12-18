@@ -121,8 +121,10 @@ sub line {
 # Print all.
 sub print {
 	my $self = shift;
-	my $ret = $self->junctions."\n";
-	# TODO
+	my $ret = $self->junctions;
+	foreach my $line (@{$self->{'tube'}->get_lines}) {
+		$ret .= $self->line($line->name);
+	}
 	return $ret;
 }
 
