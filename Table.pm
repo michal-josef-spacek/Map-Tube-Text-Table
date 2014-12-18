@@ -131,3 +131,186 @@ sub print {
 1;
 
 __END__
+
+=encoding utf8
+
+=head1 NAME
+
+Map::Tube::Text::Table - Table output for Map::Tube.
+
+=head1 SYNOPSIS
+
+ use Map::Tube::Text::Table;
+ my $obj = Map::Tube::Text::Table->new(%params);
+ my $text = $obj->junctions;
+ my $text = $obj->line($line);
+ my $text = $obj->print;
+
+=head1 METHODS
+
+=over 8
+
+=item C<new(%params)>
+
+ Constructor.
+
+=over 8
+
+=item * C<tube>
+
+ Map::Tube object.
+ It is required.
+ Default value is undef.
+
+=back
+
+=item C<junctions()>
+
+ Print junctions.
+ Returns string with unicode text table.
+
+=item C<line($line)>
+
+ Print line.
+ Returns string with unicode text table.
+
+=item C<print()>
+
+ Print all (junctions + all lines).
+ Returns string with unicode text table.
+
+=back
+
+=head1 ERRORS
+
+ new():
+         Parameter 'tube' is required.
+         Parameter 'tube' must be 'Map::Tube' object.
+         From Class::Utils::set_params():
+                 Unknown parameter '%s'.
+
+=head1 EXAMPLE
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Encode qw(encode_utf8);
+ use English;
+ use Error::Pure qw(err);
+ use Map::Tube::Text::Table;
+
+ # Error::Pure environment.
+ $ENV{'ERROR_PURE'} = 'AllError';
+
+ # Arguments.
+ if (@ARGV < 1) {
+         print STDERR "Usage: $0 metro\n";
+         exit 1;
+ }
+ my $metro = $ARGV[0];
+ 
+ # Object.
+ my $class = 'Map::Tube::'.$metro;
+ eval "require $class;";
+ if ($EVAL_ERROR) {
+         err "Cannot load '$class' class.",
+                 'Error', $EVAL_ERROR;
+ }
+ 
+ # Metro object.
+ my $tube = eval "$class->new";
+ if ($EVAL_ERROR) {
+         err "Cannot create object for '$class' class.",
+                 'Error', $EVAL_ERROR;
+ }
+ 
+ # GraphViz object.
+ my $table = Map::Tube::Text::Table->new(
+         'tube' => $tube,
+ );
+ 
+ # Print out.
+ print encode_utf8($table->print);
+
+ # Output without arguments like:
+ # Usage: /tmp/SZXfa2g154 metro
+
+ # Output with 'Tbilisi' argument like:
+ # ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐
+ # │ Junctions                                                                                        │
+ # ├──────────────────┬──────────────────────────────────────────┬────────────────────────────────────┤
+ # │ Station          │ Line                                     │ Connected to                       │
+ # ├──────────────────┼──────────────────────────────────────────┼────────────────────────────────────┤
+ # │ სადგურის მოედანი │ ახმეტელი-ვარკეთილის ხაზი,საბურთალოს ხაზი │ მარჯანიშვილი, ნაძალადევი, წერეთელი │
+ # └──────────────────┴──────────────────────────────────────────┴────────────────────────────────────┘
+ # ┌───────────────────────────────────────────────────────────┐
+ # │ Line 'ახმეტელი-ვარკეთილის ხაზი'                           │
+ # ├──────────────────────┬────────────────────────────────────┤
+ # │ Station              │ Connected to                       │
+ # ├──────────────────────┼────────────────────────────────────┤
+ # │ ახმეტელის თეატრი     │ სარაჯიშვილი                        │
+ # │ სარაჯიშვილი          │ ახმეტელის თეატრი, გურამიშვილი      │
+ # │ გურამიშვილი          │ სარაჯიშვილი, ღრმაღელე              │
+ # │ ღრმაღელე             │ გურამიშვილი, დიდუბე                │
+ # │ დიდუბე               │ გოცირიძე, ღრმაღელე                 │
+ # │ გოცირიძე             │ დიდუბე, ნაძალადევი                 │
+ # │ ნაძალადევი           │ გოცირიძე, სადგურის მოედანი         │
+ # │ მარჯანიშვილი         │ რუსთაველი, სადგურის მოედანი        │
+ # │ რუსთაველი            │ თავისუფლების მოედანი, მარჯანიშვილი │
+ # │ თავისუფლების მოედანი │ ავლაბარი, რუსთაველი                │
+ # │ ავლაბარი             │ 300 არაგველი, თავისუფლების მოედანი │
+ # │ 300 არაგველი         │ ავლაბარი, ისანი                    │
+ # │ ისანი                │ 300 არაგველი, სამგორი              │
+ # │ სამგორი              │ ვარკეთილი, ისანი                   │
+ # │ ვარკეთილი            │ სამგორი                            │
+ # │ სადგურის მოედანი     │ მარჯანიშვილი, ნაძალადევი, წერეთელი │
+ # └──────────────────────┴────────────────────────────────────┘
+ # ┌────────────────────────────────────────────────────────────────────┐
+ # │ Line 'საბურთალოს ხაზი'                                             │
+ # ├─────────────────────────┬──────────────────────────────────────────┤
+ # │ Station                 │ Connected to                             │
+ # ├─────────────────────────┼──────────────────────────────────────────┤
+ # │ წერეთელი                │ სადგურის მოედანი, ტექნიკური უნივერსიტეტი │
+ # │ ტექნიკური უნივერსიტეტი  │ სამედიცინო უნივერსიტეტი, წერეთელი        │
+ # │ სამედიცინო უნივერსიტეტი │ დელისი, ტექნიკური უნივერსიტეტი           │
+ # │ დელისი                  │ ვაჟა-ფშაველა, სამედიცინო უნივერსიტეტი    │
+ # │ ვაჟა-ფშაველა            │ დელისი                                   │
+ # │ სადგურის მოედანი        │ მარჯანიშვილი, ნაძალადევი, წერეთელი       │
+ # └─────────────────────────┴──────────────────────────────────────────┘
+
+=head1 DEPENDENCIES
+
+L<Class::Utils>,
+L<Error::Pure>,
+L<Map::Tube::Text::Table::Utils>,
+L<Readonly>,
+L<Scalar::Util>.
+
+=head1 SEE ALSO
+
+L<Map::Tube>,
+L<Map::Tube::GraphViz>.
+
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/Map-Tube-Text-Table>
+
+=head1 AUTHOR
+
+Michal Špaček L<mailto:skim@cpan.org>
+
+L<http://skim.cz>
+
+=head1 LICENSE AND COPYRIGHT
+
+ © 2014 Michal Špaček
+ Artistic License
+ BSD 2-Clause License
+
+=head1 VERSION
+
+0.01
+
+=cut
