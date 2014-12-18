@@ -13,6 +13,7 @@ use Text::UnicodeBox::Control qw(:all);
 
 # Constants.
 Readonly::Array our @EXPORT_OK => qw(table);
+Readonly::Scalar our $EMPTY_STR => q{};
 Readonly::Scalar our $SPACE => q{ };
 
 # Version.
@@ -21,6 +22,12 @@ our $VERSION = 0.01;
 # Print table.
 sub table {
 	my ($title, $data_len_ar, $title_ar, $data_ar) = @_;
+
+	# Check data.
+	if (! @{$data_ar}) {
+		return $EMPTY_STR;
+	}
+
 	my $t = Text::UnicodeBox->new;
 
 	# Table title.
