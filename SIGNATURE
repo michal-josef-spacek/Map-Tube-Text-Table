@@ -14,15 +14,15 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 d0563d4bf123b600e3c945055a7019345a8486b9 Changes
+SHA1 169475279ccab13bde256d0e141885f0a4f0d1f3 Changes
 SHA1 882221895a73bad18eb9f16a0ce523a968a932c1 LICENSE.artistic_2
 SHA1 62ea8161d1cc7e68c6aa5a240b42a571037b8c51 LICENSE.bsd
 SHA1 f53723a847251ecf51cefc849d693b9d3da1d189 MANIFEST
-SHA1 8f9a6d3227815aa3cd3a35f063b3582f180ab487 META.yml
-SHA1 5b2d661ade45cb16b4206c187159be5aa71b4ce7 Makefile.PL
-SHA1 467f905adb0764d6e48254c74129cde2c569b191 README
-SHA1 0edb9fc6d7f1cb321645cc750d08deaaea07534a Table.pm
-SHA1 2e1028afc56f0a4bbcc25e311bcb63e77850e2d7 Table/Utils.pm
+SHA1 5b76e4fc93bc977c11f45af28fbaf2594773dc85 META.yml
+SHA1 eba0eb27745eb0363a1c2e1ac4ba2e347c573cb7 Makefile.PL
+SHA1 e8b09fbe0486e6bf153997d087f41e1f0529af20 README
+SHA1 04e987c4e01dddf12ad045bf6447f1d6bcb1cebf Table.pm
+SHA1 7b111382ce7a681a40deec77c08da70e6e986ef7 Table/Utils.pm
 SHA1 b8187eef0a03bda59b543f50997e8b63f1b9ed68 examples/ex1.pl
 SHA1 1a3bdfe7c1944740b6b52851bc36a8daaae852a2 examples/ex2.pl
 SHA1 d2664c57b65686abbfbbe1e71229761625be4922 inc/Module/Install.pm
@@ -35,21 +35,21 @@ SHA1 79f5b4199f622e8b05aac266b0c39f6a85bb303f inc/Module/Install/ReadmeFromPod.p
 SHA1 65a1f09af1f4f9e47a98b6b45667c328b1b2f9c0 inc/Module/Install/Win32.pm
 SHA1 f191c49475b3f51775180cd4f7e41e3bdab7f85a inc/Module/Install/WriteAll.pm
 SHA1 b8a5565b1ddd75d3978fae732c3a3791b1805341 t/Map-Tube-Text-Table-Utils/00-use.t
-SHA1 4d3130ccf8b88b4b87cfe32b3cbabbea85c4c7c6 t/Map-Tube-Text-Table-Utils/01-version.t
+SHA1 5287fa47b63d91f8c76165c6e03894d8a2a0b93b t/Map-Tube-Text-Table-Utils/01-version.t
 SHA1 bbfa91f90af9bd8a2c241e3029426702ac8718e2 t/Map-Tube-Text-Table-Utils/02-pod_coverage.t
 SHA1 c22cb53244a3503d6a0112f0cb1ae824e9eaab8e t/Map-Tube-Text-Table-Utils/03-pod.t
 SHA1 f9b0dd6ef0bca39a519ab864eb9b82c6b63b3344 t/Map-Tube-Text-Table/00-use.t
-SHA1 a3247f59f7b002f8bc7f987799bcbdc39f011e81 t/Map-Tube-Text-Table/01-version.t
+SHA1 a1b6ecf8a9afc8f9dad826c397f6be53a2c7a0fb t/Map-Tube-Text-Table/01-version.t
 SHA1 728bf7a18477b3e4256e5355bf632e199549c1f7 t/Map-Tube-Text-Table/02-pod_coverage.t
 SHA1 c032b60dc6c8a0775782bb78ab7ebbbdacefd6ed t/Map-Tube-Text-Table/03-pod.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
-iQEcBAEBAgAGBQJUk9JFAAoJEAwa+cf4dLBaqFsIALjozpupWEOJeEWXC3lT1o0j
-Z7YVsPYqA5Gz3K8VbAMvggFg9uqtoGvKvfQidmfYf5EC6o24idQlKoCx8SeVLaJp
-u/CakqSZyWn4VZKS7gyKPs0nnjl0CNd2xvmsPbxdOhpFWlnDNAY9lYHfz76CoboT
-icTrY7o/36XQL1h7o4M0EXDvYAHV1X/5vwHHlwnSgTrtnDCFd5GOVQr4OhnbwATO
-6bgSvJoiQWczoPwkVdhxqFy7XQRm5825811TS9kFm3eLU2ryvGtSKmt0rQbM0rjl
-Z9uOrqu+tI2dk3p06Qmnwe7Ka8cCDA83J+hx60LD+K+IXq8cVZa/BNKd6odCFlU=
-=l++T
+iQEcBAEBAgAGBQJUlG+aAAoJEAwa+cf4dLBau3MIAN40O22FhA2EqkwsIT/3a8af
+sxYwqhbS6UmeF/Hy2vIqE+g+qEB7UXbqrJZhvLDv4kokY8VH+fzRDR97rCbhJ+gi
+i3uYCs59zJ8LSiY4v6Bhgjmu7Go0w3cSDiYmXQn+yY/8Vh6xOCebCWSXUYCc4rYR
+tiE3PLxZCnEnKjIHbl2hNFrJzfybuzLfG4hSuGNkBwEguC2rTJTBzHYLwWYQsSdT
+27TvVbDL/4xNV6W5tnHhsXpJ3W2v6Vki6Gk/2y0Dyvbodcr60uJPwNX/kCuwcrRV
+2ubiJQrfnHXbY+6TrOVoat95r8UbNeDAL5GCwYQLtQAwyH6owXtx53FGMNmMyNY=
+=esKA
 -----END PGP SIGNATURE-----
