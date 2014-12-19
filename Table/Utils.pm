@@ -21,7 +21,7 @@ our $VERSION = 0.01;
 
 # Print table.
 sub table {
-	my ($title, $data_len_ar, $title_ar, $data_ar) = @_;
+	my ($title, $data_len_ar, $header_ar, $data_ar) = @_;
 
 	# Check data.
 	if (! @{$data_ar}) {
@@ -42,7 +42,7 @@ sub table {
 	# Legend.
 	$t->add_line(
 		BOX_START('bottom' => 'light', 'top' => 'light'),
-		_columns($title_ar, $data_len_ar),
+		_columns($header_ar, $data_len_ar),
 	);
 
 	# Data.
