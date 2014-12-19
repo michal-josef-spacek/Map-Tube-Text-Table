@@ -12,10 +12,13 @@ license 'bsd';
 license 'artistic_2';
 name 'Map-Tube-Text-Table';
 readme_from 'Table.pm';
+requires 'Class::Utils' => 0.06;
+requires 'Error::Pure' => 0.21;
 requires 'List::Util' => 0;
-requires 'Map::Tube' => '2.44';
-requires 'Moo' => 0;
-requires 'namespace::clean' => 0;
+requires 'Readonly' => 0;
+requires 'Scalar::Util' => 0;
+requires 'Text::UnicodeBox' => 0;
+requires 'Text::UnicodeBox::Control' => 0;
 requires 'perl' => '5.8.0';
 resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
 	'?Name=Map-Tube-Text-Table';
