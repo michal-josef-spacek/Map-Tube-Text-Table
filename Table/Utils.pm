@@ -40,10 +40,12 @@ sub table {
 	);
 
 	# Legend.
-	$t->add_line(
-		BOX_START('bottom' => 'light', 'top' => 'light'),
-		_columns($header_ar, $data_len_ar),
-	);
+	if (defined $header_ar) {
+		$t->add_line(
+			BOX_START('bottom' => 'light', 'top' => 'light'),
+			_columns($header_ar, $data_len_ar),
+		);
+	}
 
 	# Data.
 	while (my $row_ar = shift @{$data_ar}) {
