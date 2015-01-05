@@ -150,7 +150,8 @@ L<Text::UnicodeBox::Control>.
 =head1 SEE ALSO
 
 L<Map::Tube>,
-L<Map::Tube::Text::Table>.
+L<Map::Tube::Text::Table>,
+L<Task::Map::Tube>.
 
 =head1 REPOSITORY
 

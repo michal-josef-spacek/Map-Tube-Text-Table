@@ -291,7 +291,8 @@ L<Scalar::Util>.
 =head1 SEE ALSO
 
 L<Map::Tube>,
-L<Map::Tube::GraphViz>.
+L<Map::Tube::GraphViz>,
+L<Task::Map::Tube>.
 
 =head1 REPOSITORY
 
