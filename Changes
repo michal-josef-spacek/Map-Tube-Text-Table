@@ -5,6 +5,7 @@
 
  [Map::Tube::Text::Table]
  - Add lines() method.
+ - Rewrite to new Map::Tube::Text::Table::Utils::table().
 
  [Map::Tube::Text::Table::Utils]
  - Fix table() subroutine for situation without headers.

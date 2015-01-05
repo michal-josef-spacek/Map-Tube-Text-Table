@@ -78,7 +78,6 @@ sub junctions {
 			}
 		}
 	}
-	map { $_++ } @data_len;
 
 	# Print and return table.
 	return table($JUNCTIONS, \@data_len, \@title, \@data);
@@ -113,7 +112,6 @@ sub line {
 			}
 		}
 	}
-	map { $_++ } @data_len;
 
 	# Print and return table.
 	return table($LINE." '$line'", \@data_len, \@title, \@data);
