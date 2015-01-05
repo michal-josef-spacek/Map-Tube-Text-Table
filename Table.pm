@@ -123,7 +123,7 @@ sub lines {
 	my $lines_ar = $self->{'tube'}->get_lines;
 	my $length = 0;
 	my @data;
-	foreach my $line (@{$lines_ar}) {
+	foreach my $line (sort @{$lines_ar}) {
 		push @data, [$line];
 		if (length $line > $length) {
 			$length = length $line;
@@ -191,7 +191,7 @@ Map::Tube::Text::Table - Table output for Map::Tube.
 
 =item C<lines()>
 
- Print lines.
+ Print sorted lines.
  Returns string with unicode text table.
 
 =item C<print()>

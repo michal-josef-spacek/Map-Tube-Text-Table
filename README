@@ -28,7 +28,7 @@ METHODS
              Returns string with unicode text table.
 
     "lines()"
-             Print lines.
+             Print sorted lines.
              Returns string with unicode text table.
 
     "print()"
