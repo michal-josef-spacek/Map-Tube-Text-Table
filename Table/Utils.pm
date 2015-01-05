@@ -15,6 +15,7 @@ use Text::UnicodeBox::Control qw(:all);
 Readonly::Array our @EXPORT_OK => qw(table);
 Readonly::Scalar our $EMPTY_STR => q{};
 Readonly::Scalar our $SPACE => q{ };
+Readonly::Scalar our $SPACE_ON_END_COUNT => 1;
 
 # Version.
 our $VERSION = 0.03;
@@ -31,11 +32,11 @@ sub table {
 	my $t = Text::UnicodeBox->new;
 
 	# Table title.
+	my $pipes_in_count = @{$data_len_ar} * 2 - 2;
 	$t->add_line(
 		BOX_START('bottom' => 'light', 'top' => 'light'),
-		# XXX Co to je za vypocet?
-		_column_left($title, sum(@{$data_len_ar})
-			+ @{$data_len_ar} * 2 - 2),
+		_column_left($title, sum(map { $_ + $SPACE_ON_END_COUNT }
+			@{$data_len_ar}) + $pipes_in_count),
 		BOX_END(),
 	);
 
@@ -74,7 +75,8 @@ sub _columns {
 	my @ret;
 	my $i = 0;
 	foreach my $item (@{$data_ar}) {
-		push @ret, _column_left($item, $data_len_ar->[$i++]);
+		push @ret, _column_left($item, $data_len_ar->[$i++]
+			+ $SPACE_ON_END_COUNT);
 		if (@{$data_ar} > $i) {
 			push @ret, BOX_RULE;
 		} else {
