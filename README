@@ -6,6 +6,7 @@ SYNOPSIS
      my $obj = Map::Tube::Text::Table->new(%params);
      my $text = $obj->junctions;
      my $text = $obj->line($line);
+     my $text = $obj->lines;
      my $text = $obj->print;
 
 METHODS
@@ -24,6 +25,10 @@ METHODS
 
     "line($line)"
              Print line.
+             Returns string with unicode text table.
+
+    "lines()"
+             Print lines.
              Returns string with unicode text table.
 
     "print()"

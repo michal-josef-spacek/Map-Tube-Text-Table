@@ -3,6 +3,9 @@
  - Add Task::Map::Tube to SEE ALSO section in doc.
  - Update copyright years to 2015.
 
+ [Map::Tube::Text::Table]
+ - Add lines() method.
+
  [Map::Tube::Text::Table::Utils]
  - Fix table() subroutine for situation without headers.
 

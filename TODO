@@ -3,7 +3,6 @@ TODO
 2. V tabulce linky, by mela byt linka poporade. A v druhem sloupci jenom ostatni
    navaznosti.
 Problem je, ze nektere linky jsou rozdvojene a nejsou v linii. Co s tim?
-3. Pridat tubulku linek.
 4. Pridat ID pro stanici do tabulky na pozadani.
 5.
 
@@ -11,3 +10,6 @@ Applied
 =======
 1. Prvni verze.
 OK [20141218] skim
+
+3. Pridat tubulku linek.
+OK [20150105] skim

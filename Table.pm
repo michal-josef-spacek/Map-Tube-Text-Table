@@ -15,6 +15,7 @@ use Scalar::Util qw(blessed);
 Readonly::Scalar our $CONNECTED_TO => q{Connected to};
 Readonly::Scalar our $JUNCTIONS => q{Junctions};
 Readonly::Scalar our $LINE => q{Line};
+Readonly::Scalar our $LINES => q{Lines};
 Readonly::Scalar our $STATION => q{Station};
 
 # Version.
@@ -118,6 +119,21 @@ sub line {
 	return table($LINE." '$line'", \@data_len, \@title, \@data);
 }
 
+# Get lines.
+sub lines {
+	my $self = shift;
+	my $lines_ar = $self->{'tube'}->get_lines;
+	my $length = 0;
+	my @data;
+	foreach my $line (@{$lines_ar}) {
+		push @data, [$line];
+		if (length $line > $length) {
+			$length = length $line;
+		}
+	}
+	return table($LINES, [$length], undef, \@data);
+}
+
 # Print all.
 sub print {
 	my $self = shift;
@@ -144,6 +160,7 @@ Map::Tube::Text::Table - Table output for Map::Tube.
  my $obj = Map::Tube::Text::Table->new(%params);
  my $text = $obj->junctions;
  my $text = $obj->line($line);
+ my $text = $obj->lines;
  my $text = $obj->print;
 
 =head1 METHODS
@@ -172,6 +189,11 @@ Map::Tube::Text::Table - Table output for Map::Tube.
 =item C<line($line)>
 
  Print line.
+ Returns string with unicode text table.
+
+=item C<lines()>
+
+ Print lines.
  Returns string with unicode text table.
 
 =item C<print()>
