@@ -134,14 +134,14 @@ Map::Tube::Text::Table::Utils - Utilities for Map::Tube::Text::Table.
  print encode_utf8($table);
 
  # Output:
- # ┌───────────┐
- # │ Title     │
- # ├──┬───┬────┤
- # │ A│ BB│ CCC│
- # ├──┼───┼────┤
- # │ E│ A │ A  │
- # │ A│ Ga│ Acv│
- # └──┴───┴────┘
+ # ┌──────────────┐
+ # │ Title        │
+ # ├───┬────┬─────┤
+ # │ A │ BB │ CCC │
+ # ├───┼────┼─────┤
+ # │ E │ A  │ A   │
+ # │ A │ Ga │ Acv │
+ # └───┴────┴─────┘
 
 =head1 DEPENDENCIES
 
