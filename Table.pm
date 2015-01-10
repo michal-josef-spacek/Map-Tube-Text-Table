@@ -13,6 +13,7 @@ use Scalar::Util qw(blessed);
 
 # Constants.
 Readonly::Scalar our $CONNECTED_TO => q{Connected to};
+Readonly::Scalar our $ID => q{ID};
 Readonly::Scalar our $JUNCTIONS => q{Junctions};
 Readonly::Scalar our $LINE => q{Line};
 Readonly::Scalar our $LINES => q{Lines};
@@ -27,6 +28,9 @@ sub new {
 
 	# Create object.
 	my $self = bless {}, $class;
+
+	# Print ids.
+	$self->{'print_id'} = 0;
 
 	# Map::Tube object.
 	$self->{'tube'} = undef;
@@ -90,6 +94,9 @@ sub line {
 	# Get data.
 	my @data;
 	my @title = ($STATION, $CONNECTED_TO);
+	if ($self->{'print_id'}) {
+		unshift @title, $ID;
+	}
 	my @data_len = map { length $_ } @title;
 	my $nodes_hr = $self->{'tube'}->nodes;
 	foreach my $node_name (sort keys %{$nodes_hr}) {
@@ -102,6 +109,9 @@ sub line {
 				$nodes_hr->{$node_name}->name,
 				(join ', ', sort @links),
 			];
+			if ($self->{'print_id'}) {
+				unshift @{$data_ar}, $nodes_hr->{$node_name}->id,
+			}
 			push @data, $data_ar;
 
 			# Maximum data length.
@@ -170,6 +180,14 @@ Map::Tube::Text::Table - Table output for Map::Tube.
  Constructor.
 
 =over 8
+
+=item * C<print_id>
+
+ Flag, that means printing of ID.
+ Affected methods:
+ - line()
+ - print() (by line()).
+ Default value is 0.
 
 =item * C<tube>
 

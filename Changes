@@ -1,4 +1,6 @@
 0.04
+ [Map::Tube::Text::Table]
+ - Add 'print_id' parameter for ID printing in line() method.
 
 0.03 2015-01-07T07:53:38+01:00
  [Common]
