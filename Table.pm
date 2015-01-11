@@ -329,6 +329,7 @@ L<Scalar::Util>.
 =head1 SEE ALSO
 
 L<Map::Tube>,
+L<Map::Tube::Graph>,
 L<Map::Tube::GraphViz>,
 L<Task::Map::Tube>.
 
