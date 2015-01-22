@@ -331,6 +331,7 @@ L<Scalar::Util>.
 L<Map::Tube>,
 L<Map::Tube::Graph>,
 L<Map::Tube::GraphViz>,
+L<Map::Tube::Plugin::Graph>,
 L<Task::Map::Tube>.
 
 =head1 REPOSITORY

@@ -145,7 +145,8 @@ DEPENDENCIES
     Scalar::Util.
 
 SEE ALSO
-    Map::Tube, Map::Tube::Graph, Map::Tube::GraphViz, Task::Map::Tube.
+    Map::Tube, Map::Tube::Graph, Map::Tube::GraphViz,
+    Map::Tube::Plugin::Graph, Task::Map::Tube.
 
 REPOSITORY
     <https://github.com/tupinek/Map-Tube-Text-Table>
