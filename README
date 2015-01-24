@@ -141,8 +141,8 @@ EXAMPLE
      # └─────────────────────────┴──────────────────────────────────────────┘
 
 DEPENDENCIES
-    Class::Utils, Error::Pure, Map::Tube::Text::Table::Utils, Readonly,
-    Scalar::Util.
+    Class::Utils, Error::Pure, Map::Tube::Text::Table::Utils,
+    List::MoreUtils, Readonly, Scalar::Util.
 
 SEE ALSO
     Map::Tube, Map::Tube::Graph, Map::Tube::GraphViz,

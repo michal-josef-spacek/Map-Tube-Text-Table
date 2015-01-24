@@ -8,6 +8,7 @@ use warnings;
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
 use Map::Tube::Text::Table::Utils qw(table);
+use List::MoreUtils qw(any);
 use Readonly;
 use Scalar::Util qw(blessed);
 
@@ -100,7 +101,8 @@ sub line {
 	my @data_len = map { length $_ } @title;
 	my $nodes_hr = $self->{'tube'}->nodes;
 	foreach my $node_name (sort keys %{$nodes_hr}) {
-		if ($nodes_hr->{$node_name}->line =~ m/$line/ms) {
+		if (any { $_ eq $line } map { $_->name }
+			@{$nodes_hr->{$node_name}->line}) {
 
 			# Get data.
 			my @links = map { $self->{'tube'}->get_node_by_id($_)->name }
@@ -323,6 +325,7 @@ Map::Tube::Text::Table - Table output for Map::Tube.
 L<Class::Utils>,
 L<Error::Pure>,
 L<Map::Tube::Text::Table::Utils>,
+L<List::MoreUtils>,
 L<Readonly>,
 L<Scalar::Util>.
 

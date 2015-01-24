@@ -4,6 +4,7 @@
  - Add Map::Tube::Plugin::Graph to SEE ALSO section in doc.
  - Add 'print_id' parameter for ID printing in line() method.
  - Fix junctions() method to new Map::Tube 2.72 version.
+ - Fix line() method to new Map::Tube 2.72 version.
 
 0.03 2015-01-07T07:53:38+01:00
  [Common]

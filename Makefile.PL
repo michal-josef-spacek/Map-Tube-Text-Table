@@ -15,6 +15,7 @@ readme_from 'Table.pm';
 requires 'Class::Utils' => 0.06;
 requires 'Error::Pure' => 0.21;
 requires 'List::Util' => 0;
+requires 'List::MoreUtils' => 0;
 requires 'Readonly' => 0;
 requires 'Scalar::Util' => 0;
 requires 'Text::UnicodeBox' => 0;

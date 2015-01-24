@@ -28,6 +28,7 @@ no_index:
 requires:
   Class::Utils: 0.06
   Error::Pure: 0.21
+  List::MoreUtils: 0
   List::Util: 0
   Readonly: 0
   Scalar::Util: 0
