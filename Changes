@@ -1,5 +1,6 @@
 0.05
  [Common]
+ - Rewrite SEE ALSO section to new style.
  - Update Module::Install to 1.16 version.
 
 0.04 2015-01-24T18:42:18+01:00
