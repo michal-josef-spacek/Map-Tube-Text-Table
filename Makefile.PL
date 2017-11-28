@@ -8,7 +8,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Table information about Map::Tube object.';
-author 'Michal Spacek <skim@cpan.org>';
+author 'Michal Josef Spacek <skim@cpan.org>';
 license 'bsd';
 license 'artistic_2';
 name 'Map-Tube-Text-Table';
