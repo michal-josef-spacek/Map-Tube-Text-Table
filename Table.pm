@@ -18,7 +18,7 @@ Readonly::Scalar our $LINE => q{Line};
 Readonly::Scalar our $LINES => q{Lines};
 Readonly::Scalar our $STATION => q{Station};
 
-our $VERSION = 0.05;
+our $VERSION = 0.06;
 
 # Constructor.
 sub new {
@@ -357,6 +357,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-0.05
+0.06
 
 =cut

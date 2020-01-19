@@ -15,7 +15,7 @@ Readonly::Scalar our $EMPTY_STR => q{};
 Readonly::Scalar our $SPACE => q{ };
 Readonly::Scalar our $SPACE_ON_END_COUNT => 1;
 
-our $VERSION = 0.05;
+our $VERSION = 0.06;
 
 # Print table.
 sub table {
@@ -183,6 +183,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-0.05
+0.06
 
 =cut
