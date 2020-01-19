@@ -1,4 +1,4 @@
-0.05
+0.05 2020-01-19T13:27:16+01:00
  [Common]
  - Add author tests.
  - Add .travis.yml file.
