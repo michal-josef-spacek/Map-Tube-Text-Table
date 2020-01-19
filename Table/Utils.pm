@@ -159,7 +159,7 @@ L<Task::Map::Tube>.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/Map-Tube-Text-Table>
+L<https://github.com/michal-josef-spacek/Map-Tube-Text-Table>
 
 =head1 AUTHOR
 
