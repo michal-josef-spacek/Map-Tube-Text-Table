@@ -1,11 +1,9 @@
 package Map::Tube::Text::Table::Utils;
 
-# Pragmas.
 use base qw(Exporter);
 use strict;
 use warnings;
 
-# Modules.
 use List::Util qw(sum);
 use Readonly;
 use Text::UnicodeBox;
@@ -17,7 +15,6 @@ Readonly::Scalar our $EMPTY_STR => q{};
 Readonly::Scalar our $SPACE => q{ };
 Readonly::Scalar our $SPACE_ON_END_COUNT => 1;
 
-# Version.
 our $VERSION = 0.05;
 
 # Print table.
@@ -116,11 +113,9 @@ Map::Tube::Text::Table::Utils - Utilities for Map::Tube::Text::Table.
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Module.
  use Encode qw(encode_utf8);
  use Map::Tube::Text::Table::Utils qw(table);
 

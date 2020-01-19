@@ -1,10 +1,8 @@
 package Map::Tube::Text::Table;
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
 use Map::Tube::Text::Table::Utils qw(table);
@@ -20,7 +18,6 @@ Readonly::Scalar our $LINE => q{Line};
 Readonly::Scalar our $LINES => q{Lines};
 Readonly::Scalar our $STATION => q{Station};
 
-# Version.
 our $VERSION = 0.05;
 
 # Constructor.
@@ -231,11 +228,9 @@ Map::Tube::Text::Table - Table output for Map::Tube.
 
 =head1 EXAMPLE
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Encode qw(encode_utf8);
  use English;
  use Error::Pure qw(err);

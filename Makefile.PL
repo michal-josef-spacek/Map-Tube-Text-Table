@@ -1,4 +1,3 @@
-# Pragmas.
 use lib 'inc';
 use strict;
 use warnings;
