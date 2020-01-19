@@ -98,6 +98,7 @@ Map::Tube::Text::Table::Utils - Utilities for Map::Tube::Text::Table.
 =head1 SYNOPSIS
 
  use Map::Tube::Text::Table::Utils qw(table);
+
  my $table = table($title, $data_len_ar, $header_ar, $data_ar);
 
 =head1 SUBROUTINES

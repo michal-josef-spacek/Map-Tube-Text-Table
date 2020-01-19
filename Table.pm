@@ -164,6 +164,7 @@ Map::Tube::Text::Table - Table output for Map::Tube.
 =head1 SYNOPSIS
 
  use Map::Tube::Text::Table;
+
  my $obj = Map::Tube::Text::Table->new(%params);
  my $text = $obj->junctions;
  my $text = $obj->line($line);
