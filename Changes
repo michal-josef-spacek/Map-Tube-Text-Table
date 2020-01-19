@@ -3,6 +3,7 @@
  - Improve SEE ALSO section in doc.
 
  [Common]
+ - Add author tests.
  - Add .travis.yml file.
  - Fix Makefile.PL for new version of Perl and no default »use lib '.'«.
  - Rewrite SEE ALSO section to new style.
