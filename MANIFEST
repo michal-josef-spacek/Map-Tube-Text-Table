@@ -25,6 +25,7 @@ t/Map-Tube-Text-Table-Utils/01-version.t
 t/Map-Tube-Text-Table-Utils/02-pod_coverage.t
 t/Map-Tube-Text-Table-Utils/02-version.t
 t/Map-Tube-Text-Table-Utils/03-pod.t
+t/Map-Tube-Text-Table-Utils/03-table.t
 t/Map-Tube-Text-Table/00-use.t
 t/Map-Tube-Text-Table/01-use.t
 t/Map-Tube-Text-Table/01-version.t

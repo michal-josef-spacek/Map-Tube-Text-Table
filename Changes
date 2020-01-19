@@ -1,5 +1,6 @@
 0.05
  [Map::Tube::Text::Table::Utils]
+ - Add tests.
  - Improve SEE ALSO section in doc.
 
  [Common]
