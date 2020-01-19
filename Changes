@@ -1,8 +1,4 @@
 0.05
- [Map::Tube::Text::Table::Utils]
- - Add tests.
- - Improve SEE ALSO section in doc.
-
  [Common]
  - Add author tests.
  - Add .travis.yml file.
@@ -12,6 +8,10 @@
  - Update author github username.
  - Update author name.
  - Update copyright years to 2020.
+
+ [Map::Tube::Text::Table::Utils]
+ - Add tests.
+ - Improve SEE ALSO section in doc.
 
 0.04 2015-01-24T18:42:18+01:00
  [Map::Tube::Text::Table]
