@@ -1,4 +1,7 @@
 0.05
+ [Map::Tube::Text::Table::Utils]
+ - Improve SEE ALSO section in doc.
+
  [Common]
  - Add .travis.yml file.
  - Fix Makefile.PL for new version of Perl and no default »use lib '.'«.

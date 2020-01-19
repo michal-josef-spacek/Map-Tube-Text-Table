@@ -153,9 +153,21 @@ L<Text::UnicodeBox::Control>.
 
 =head1 SEE ALSO
 
-L<Map::Tube>,
-L<Map::Tube::Text::Table>,
-L<Task::Map::Tube>.
+=over 8
+
+=item L<Map::Tube>
+
+Lightweight Routing Framework
+
+=item L<Map::Tube::Text::Table>
+
+Table output for Map::Tube
+
+=item L<Task::Map::Tube>
+
+Install the Map::Tube modules.
+
+=back
 
 =head1 REPOSITORY
 
